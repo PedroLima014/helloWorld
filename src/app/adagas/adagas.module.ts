@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { JogosPageRoutingModule } from './jogos-routing.module';
+import { AdagasPageRoutingModule } from './adagas-routing.module';
 
-import { JogosPage } from './jogos.page';
+import { AdagasPage } from './adagas.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    JogosPageRoutingModule
+    AdagasPageRoutingModule
   ],
-  declarations: [JogosPage]
+  declarations: [AdagasPage]
 })
-export class JogosPageModule {}
+export class AdagasPageModule {}

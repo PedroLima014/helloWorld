@@ -34,12 +34,15 @@ ion-header {
 
     ion-back-button {
       color: var(--ion-color-warning)
+
     }
 
     ion-title{
       text-align: center;
-      color: var(--ion-color-warning)
+      color: rgb(255, 255, 255)
       text-transform uppercase;
     }
   }
 }
+
+

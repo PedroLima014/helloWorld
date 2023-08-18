@@ -3,6 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-background-color: var(--ion-color-lightb);
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -75,37 +77,37 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
-  /** Nova **/
-  --ion-color-nova: #37fbd4;
-	--ion-color-nova-rgb: 55,251,212;
-	--ion-color-nova-contrast: #000000;
-	--ion-color-nova-contrast-rgb: 0,0,0;
-	--ion-color-nova-shade: #30ddbb;
-	--ion-color-nova-tint: #4bfbd8;
+  /** Brown **/
+  --ion-color-brown: #916d55;
+	--ion-color-brown-rgb: 145,109,85;
+	--ion-color-brown-contrast: #ffffff;
+	--ion-color-brown-contrast-rgb: 255,255,255;
+	--ion-color-brown-shade: #80604b;
+	--ion-color-brown-tint: #9c7c66;
 
- /** Veya **/
-  --ion-color-veya: #a23de6;
-	--ion-color-veya-rgb: 162,61,230;
-	--ion-color-veya-contrast: #ffffff;
-	--ion-color-veya-contrast-rgb: 255,255,255;
-	--ion-color-veya-shade: #8f36ca;
-	--ion-color-veya-tint: #ab50e9;
+ /** LightB **/
+ --ion-color-lightb: #c09059;
+	--ion-color-lightb-rgb: 192,144,89;
+	--ion-color-lightb-contrast: #000000;
+	--ion-color-lightb-contrast-rgb: 0,0,0;
+	--ion-color-lightb-shade: #a97f4e;
+	--ion-color-lightb-tint: #c69b6a;
 }
 
-.ion-color-nova {
-	--ion-color-base: var(--ion-color-nova);
-	--ion-color-base-rgb: var(--ion-color-nova-rgb);
-	--ion-color-contrast: var(--ion-color-nova-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-nova-contrast-rgb);
-	--ion-color-shade: var(--ion-color-nova-shade);
-	--ion-color-tint: var(--ion-color-nova-tint);
+.ion-color-brown {
+	--ion-color-base: var(--ion-color-brown);
+	--ion-color-base-rgb: var(--ion-color-brown-rgb);
+	--ion-color-contrast: var(--ion-color-brown-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-brown-contrast-rgb);
+	--ion-color-shade: var(--ion-color-brown-shade);
+	--ion-color-tint: var(--ion-color-brown-tint);
 }
 
-.ion-color-veya {
-	--ion-color-base: var(--ion-color-veya);
-	--ion-color-base-rgb: var(--ion-color-veya-rgb);
-	--ion-color-contrast: var(--ion-color-veya-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-veya-contrast-rgb);
-	--ion-color-shade: var(--ion-color-veya-shade);
-	--ion-color-tint: var(--ion-color-veya-tint);
+.ion-color-lightb {
+	--ion-color-base: var(--ion-color-lightb);
+	--ion-color-base-rgb: var(--ion-color-lightb-rgb);
+	--ion-color-contrast: var(--ion-color-lightb-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-lightb-contrast-rgb);
+	--ion-color-shade: var(--ion-color-lightb-shade);
+	--ion-color-tint: var(--ion-color-lightb-tint);
 }

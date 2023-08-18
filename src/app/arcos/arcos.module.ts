@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SapatosPageRoutingModule } from './sapatos-routing.module';
+import { ArcosPageRoutingModule } from './arcos-routing.module';
 
-import { SapatosPage } from './sapatos.page';
+import { ArcosPage } from './arcos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SapatosPageRoutingModule
+    ArcosPageRoutingModule
   ],
-  declarations: [SapatosPage]
+  declarations: [ArcosPage]
 })
-export class SapatosPageModule {}
+export class ArcosPageModule {}
