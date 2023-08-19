@@ -9,48 +9,15 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2></h2>
-        <p></p>
-      </ion-label>
-
-      <ion-button expand="block" slot="end">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2></h2>
-        <p></p>
-      </ion-label>
-
-      <ion-button expand="block" slot="end">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2></h2>
-        <p></p>
-      </ion-label>
-
-      <ion-button expand="block" slot="end">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
+  <ion-item *ngFor="let produto of listaProdutos">
+    <ion-label>
+      <h2>{{ produto.nome }}</h2>
+      <p>{{ produto.descricao }}</p>
+    </ion-label>
+    <ion-badge color="dark">R$ {{ produto.valor }},00</ion-badge>
+    <ion-button expand="block" slot="end" color="dark">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+   </ion-item>
 
 </ion-content>

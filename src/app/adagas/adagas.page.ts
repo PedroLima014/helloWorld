@@ -7,6 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdagasPage implements OnInit {
 
+  listaProdutos = [
+    {
+    nome: "Adaga - ",
+    descricao: "",
+    valor: 0
+  },
+    {
+      nome: "Adaga - ",
+      descricao: "",
+      valor: 0
+    },
+    {
+      nome:"Adaga - ",
+      descricao: "",
+      valor: 0
+    },
+  ];
+
   constructor() { }
 
   ngOnInit() {

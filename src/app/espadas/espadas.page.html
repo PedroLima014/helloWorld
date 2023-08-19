@@ -9,51 +9,15 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="https://ae01.alicdn.com/kf/H2e257f988095423a8962d5125d72c9227/Espada-katana-japonesa-hecha-a-mano-acero-real-espada-ninjato-borde-afilado.jpg" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Katana</h2>
-        <p>97cm - curvada com um unico fio de corte</p>
-      </ion-label>
-      <ion-badge color="dark">R$ 100,00</ion-badge>
-
-      <ion-button expand="block" slot="end">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="https://pm1.narvii.com/8039/e233ac617858929cb515cbb082e25a6001c1e34ar1-2048-2048v2_00.jpg" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Rapieira</h2>
-        <p>82cm - lâmina fina como uma agulha para estocadas</p>
-      </ion-label>
-      <ion-badge color="dark">R$ 105,00</ion-badge>
-
-      <ion-button expand="block" slot="end">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="" />
-      </ion-thumbnail>
-      <ion-label>
-        <h2></h2>
-        <p></p>
-      </ion-label>
-      <ion-badge color="dark">R$ 15,00</ion-badge>
-
-      <ion-button expand="block" slot="end">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
+  <ion-item *ngFor="let produto of listaProdutos">
+    <ion-label>
+      <h2>{{ produto.nome }}</h2>
+      <p>{{ produto.descricao }}</p>
+    </ion-label>
+    <ion-badge color="dark">R$ {{ produto.valor }},00</ion-badge>
+    <ion-button expand="block" slot="end" color="dark">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+   </ion-item>
 
 </ion-content>

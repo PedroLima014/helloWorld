@@ -26,23 +26,30 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
-
-
 ion-header {
   ion-toolbar{
     --backgrund: var(--ion-color-dark);
 
     ion-back-button {
-      color: var(--ion-color-warning)
+      color: var(--ion-color-light)
 
     }
 
     ion-title{
       text-align: center;
-      color: rgb(255, 255, 255)
-      text-transform uppercase;
+      color: var(--ion-color-light);
+      font-size: 18px;
+      font-weight: 800;
     }
   }
+}
+
+.borda {
+  border: 1px solid black;
+}
+
+ion-item{
+  text-align: center;
 }
 
 
