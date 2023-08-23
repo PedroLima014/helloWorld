@@ -1,17 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="brown">
     <ion-buttons slot="start">
       <ion-back-button>Button</ion-back-button>
     </ion-buttons>
-    <ion-title>Arcos</ion-title>
+    <ion-title class="custom-title">Arcos</ion-title>
   </ion-toolbar>
+  <ion-searchbar animated="true" placeholder="Animated" color="dark"></ion-searchbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <ion-item *ngFor="let produto of listaProdutos">
     <ion-label>
-      <h2>{{ produto.nome }}</h2>
+      <h2 class="custom-title">{{ produto.nome }}</h2>
       <p>{{ produto.descricao }}</p>
     </ion-label>
     <ion-badge color="dark">R$ {{ produto.valor }},00</ion-badge>
