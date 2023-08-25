@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BdtempService } from '../services/bdtemp.service';
 
 @Component({
   selector: 'app-espadas',
@@ -24,9 +25,25 @@ export class EspadasPage implements OnInit {
     },
   ];
 
-  constructor() { }
+  qtdeItensCarrinho = 0
 
-  ngOnInit() {
-  }
+  listasProdutos = [
+  ];
+
+
+    constructor(public bdtemp: BdtempService) { }
+
+    ngOnInit() {
+    }
+
+    addProdutoCarrinho(produto: any){
+      this.bdtemp.addProdutoCarrinho(produto);
+      this.buscarDadosCarrinho();
+    }
+
+    buscarDadosCarrinho(){
+      this.qtdeItensCarrinho = this.bdtemp.buscar('qtdeItensCarrinho');
+    }
+
 
 }

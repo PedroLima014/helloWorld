@@ -11,7 +11,8 @@ export class PromocoesPage implements OnInit {
   listaProdutos = [
     {nome: "Espada - Katana",
     descricao: "97cm - curvada com um unico fio de corte",
-    valor: 117
+    valor: 117,
+    foto: 'https://www.espadaskatana.com.br/wp-content/uploads/2017/09/Principal-1-300x300.jpg'
   },
     {
       nome: "Espada - Rapieira",
@@ -35,6 +36,13 @@ export class PromocoesPage implements OnInit {
     },
   ];
 
+qtdeItensCarrinho = 0
+
+listasProdutos = [
+
+];
+
+
   constructor(public bdtemp: BdtempService) { }
 
   ngOnInit() {
@@ -42,6 +50,11 @@ export class PromocoesPage implements OnInit {
 
   addProdutoCarrinho(produto: any){
     this.bdtemp.addProdutoCarrinho(produto);
+    this.buscarDadosCarrinho();
+  }
+
+  buscarDadosCarrinho(){
+    this.qtdeItensCarrinho = this.bdtemp.buscar('qtdeItensCarrinho');
   }
 
 }

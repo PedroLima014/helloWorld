@@ -3,20 +3,38 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+
     <ion-title class="custom-title">Promoções</ion-title>
+
+    <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-badge color="warning">{{qtdeItensCarrinho}}</ion-badge>
+        </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
   <ion-searchbar animated="true" placeholder="Animated" color="dark"></ion-searchbar>
 </ion-header>
 
 <ion-content fullscreen="true">
+
+
   <ion-item *ngFor="let produto of listaProdutos">
+    <ion-thumbnail slot="start">
+      <img [src]="produto.foto" />
+    </ion-thumbnail>
+
     <ion-label>
-      <h2 class="custom-title">{{ produto.nome | uppercase }}</h2>
+      <h2 class="custom-title">{{ produto.nome }}</h2>
       <p>{{ produto.descricao }}</p>
     </ion-label>
+
     <ion-badge color="danger">R$ {{ produto.valor | number: '1.2-2' }}</ion-badge>
+
     <ion-button expand="block" slot="end" color="dark" (click)="addProdutoCarrinho(produto)">
       <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
     </ion-button>
   </ion-item>
+
 </ion-content>

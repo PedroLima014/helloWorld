@@ -40,10 +40,28 @@ export class BdtempService {
       this.bd['carrinho'].push(produto);
     }
 
-    console.log("Carrinho: ", this.bd['carrinho'])
+    this.totalCarrinho();
 
     }
     removeProdutoCarrinho(posicao: number) {
       this.bd['carrinho'].splice(posicao, 1);
+      this.totalCarrinho();
+  }
+
+  limparCarrinho(){
+    this.bd['carrinho'] = [];
+    this.totalCarrinho();
+  }
+
+  totalCarrinho(){
+    let total = 0;
+    if(this.bd['carrinho'].length > 0){
+      for(let prod of this.bd['carrinho']){
+        total = total + prod.valor;
+      }
+    }
+
+    this.salvar('qtdeItensCarrinho', this.bd['carrinho'].length);
+    this.salvar('totalItensCarrinho', total);
   }
 }
