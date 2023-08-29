@@ -6,7 +6,7 @@
 
     <ion-title class="custom-title">Espadas</ion-title>
 
-    <ion-buttons slot="end">
+    <ion-buttons slot="end" routerLink="/carrinho">
       <ion-button>
         <ion-icon name="cart-outline"></ion-icon>
         <ion-badge color="warning">{{qtdeItensCarrinho}}</ion-badge>
@@ -20,7 +20,10 @@
 <ion-content [fullscreen]="true">
 
   <ion-item *ngFor="let produto of listaProdutos">
-    
+    <ion-thumbnail slot="start">
+      <img [src]="produto.foto" />
+    </ion-thumbnail>
+
     <ion-label>
       <h2 class="custom-title">{{ produto.nome }}</h2>
       <p>{{ produto.descricao }}</p>
@@ -28,7 +31,7 @@
 
     <ion-badge color="brown">R$ {{ produto.valor }},00</ion-badge>
 
-    <ion-button expand="block" slot="end" color="lightb">
+    <ion-button expand="block" slot="end" color="dark" (click)="addProdutoCarrinho(produto)">
       <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
     </ion-button>
    </ion-item>

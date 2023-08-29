@@ -3,7 +3,9 @@
     <ion-buttons slot="start">
       <ion-back-button>Button</ion-back-button>
     </ion-buttons>
+
     <ion-title class="custom-title">Escudos</ion-title>
+
   </ion-toolbar>
   <ion-searchbar animated="true" placeholder="Animated" color="dark"></ion-searchbar>
 </ion-header>
@@ -11,12 +13,18 @@
 <ion-content [fullscreen]="true">
 
   <ion-item *ngFor="let produto of listaProdutos">
+    <ion-thumbnail slot="start">
+      <img [src]="produto.foto" />
+    </ion-thumbnail>
+
     <ion-label>
       <h2 class="custom-title">{{ produto.nome }}</h2>
       <p>{{ produto.descricao }}</p>
     </ion-label>
+
     <ion-badge color="dark">R$ {{ produto.valor }},00</ion-badge>
-    <ion-button expand="block" slot="end" color="dark">
+
+    <ion-button expand="block" slot="end" color="dark" (click)="addProdutoCarrinho(produto)">
       <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
     </ion-button>
    </ion-item>

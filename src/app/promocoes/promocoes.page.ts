@@ -17,22 +17,26 @@ export class PromocoesPage implements OnInit {
     {
       nome: "Espada - Rapieira",
       descricao: "82cm - lâmina fina como uma agulha para estocadas",
-      valor: 122
+      valor: 122,
+      foto:"https://de.technolong.com/f/be16e728b620f39c219d216c014b72b3"
     },
     {
       nome:"Escudo - Sctum",
       descricao: "escudo grande de corpo de formato retangular",
-      valor: 330
+      valor: 330,
+      foto: "https://zetanmedieval.com/9906-thickbox_default/escudo-romano-scutum.jpg"
     },
     {
       nome: "Arco - Mongol",
       descricao: "grande com uma curva semelhante a um 'M' curvado",
-      valor: 210
+      valor: 210,
+      foto: "https://http2.mlstatic.com/D_NQ_NP_789813-MLB28790155051_112018-O.webp"
     },
     {
       nome:"Adaga - Cigana",
       descricao:"uma lâmina curta curvada na ponta com um fio",
-      valor: 105
+      valor: 105,
+      foto:"https://i.ebayimg.com/thumbs/images/g/bngAAOSwxLdgkSly/s-l640.jpg"
     },
   ];
 
